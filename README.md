@@ -2,6 +2,16 @@
 
 Welcome to the **Job Simulator** project! This web application allows users to complete tasks with deadlines, mimicking a real-world job environment. The app consists of a front-end built with HTML, CSS, and JavaScript, and a back-end powered by Java Spring Boot.
 
+## ⚠️ Project Status: Under Active Development
+
+This project is currently in active development. New features are being continuously added and existing functionality may change. Feel free to check back regularly for updates or contribute to the development!
+
+**Upcoming Features:**
+- Enhanced task tracking system
+- User authentication and profiles
+- Performance analytics dashboard
+- Mobile-responsive design
+
 ## Table of Contents
 1. [Project Overview](#project-overview)
 2. [Technologies Used](#technologies-used)
@@ -16,7 +26,7 @@ Welcome to the **Job Simulator** project! This web application allows users to c
 The **Job Simulator** lets users submit tasks, track deadlines, and interact with a simulated work environment. It is split into a **front-end** that handles the user interface and a **back-end** that manages data, tasks, and deadlines.
 
 ### Screenshots (Add images later)
-![Screenshot of the Job Simulator](./images/screenshot1.png)
+![Screenshot of the Job Simulator](./Job-Sim-Interface.png)
 *Note: Insert your own images at the appropriate places.*
 
 ## Technologies Used
