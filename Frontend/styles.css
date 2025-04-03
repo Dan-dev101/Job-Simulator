@@ -1,0 +1,263 @@
+/* Reset and inheritance */
+/*Color Palette
+#141619
+#2C2E3A
+#050A44
+#0A21C0
+#B3B4BD
+*/
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: inherit; /* Ensure all elements inherit the font-family */
+}
+
+/* Body styles */
+body {
+    font-family: 'Work Sans', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4fc;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* Main container */
+.main-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Tasks Panel Styles */
+.tasks-panel {
+    width: 500px;
+    min-width: 500px;
+    background-color: #f4f4fc;
+    border-right: 1px solid #f4f4fc;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.tasks-panel h2 {
+    margin-bottom: 20px;
+    color: #000000;
+    font-weight: 550;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+}
+
+.task {
+    border: 2px solid #000000;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task h3 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.task p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.task-detail-panel {
+    width: 500px;
+    min-width: 500px;
+    background-color: #f4f4fc;
+    border-right: 1px solid #f4f4fc;
+    padding: 20px;
+    overflow-y: auto;
+    
+}
+
+.detailBox {
+    border: 2px solid #000000;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    height: auto;
+    min-height: 100%; /* Fill the parent container's height */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.detailBox h2 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.deadline {
+    margin-top: 10px;
+} 
+
+.difficulty {
+    margin-top: 10px;
+}
+
+.exampleOutput {
+    margin-top: 10px; 
+}
+
+.detailBox h3 { /* Steps: header */
+    margin-top: 13px;
+    border-top: 2px solid #000000;
+    padding-top: 5px;
+    padding-bottom: 7px;
+}
+
+.task-steps {
+    margin-left: 20px;
+}
+.close-task {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 10px;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}   
+
+.close-task:hover {
+    background-color: #c0240e;
+}
+
+.load-task-btn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 7px 11px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    transition: transform 0.3s;
+}
+
+.load-task-btn:hover {
+    transform: translateY(-4px);
+    background-color: #0a21c0;
+}
+
+/* Editor Panel Styles */
+.editor-panel {
+    flex-grow: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+#language-selector {
+    padding: 10px 12px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    font-size: 14px;
+    flex-grow: 1;
+    max-width: 200px;
+}
+
+#run-button {
+    font-family: 'Jost', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px 20px;
+    background-color: #141619;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#run-button:hover {
+    transform: translateY(-4px);
+    background-color: #0a21c0;
+}
+
+#container {
+    flex-grow: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.output-container {
+    height: 35%;
+    min-height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #1e1e1e;
+    color: #f8f8f8;
+    overflow: auto;
+}
+
+#output {
+    padding: 15px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .tasks-panel, 
+    .task-detail-panel,
+    .editor-panel {
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+        max-height: 50vh; /* Limit height when stacked */
+        overflow-y: auto;
+    }
+
+    .tasks-panel {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .task-detail-panel {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .editor-panel {
+        flex-grow: 1;
+    }
+
+    #container {
+        height: 300px; /* Fixed height for code editor when stacked */
+    }
+
+    .output-container {
+        height: 200px; /* Adjusted height for output */
+    }
+}

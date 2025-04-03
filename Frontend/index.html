@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Simulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Skulpt libraries -->
+    <script src="https://skulpt.org/js/skulpt.min.js" type="text/javascript"></script>
+    <script src="https://skulpt.org/js/skulpt-stdlib.js" type="text/javascript"></script>
+</head>
+
+<body> 
+    <main class="main-container">
+        <section class="tasks-panel" style="display: block;">
+            <h2>Tasks</h2>
+            <div class="task">
+                <h3>Task 1: Hello World</h3>
+                <p>Write a program that prints "Hello, World!" to the console.</p>
+                <button class="load-task-btn" data-task="1">Load Task</button>
+            </div>
+            <div class="task">
+                <h3>Task 2: Calculate Sum</h3>
+                <p>Write a function that calculates the sum of two numbers.</p>
+                <button class="load-task-btn" data-task="2">Load Task</button>
+            </div>
+            <div class="task">
+                <h3>Task 3: Reverse a String</h3>
+                <p>Create a program that reverses a given string.</p>
+                <button class="load-task-btn" data-task="3">Load Task</button>
+            </div>
+        </section>
+
+        <section class="task-detail-panel" style="display: none;"></section>
+        
+        <section class="editor-panel">
+            <div class="editor-header">
+                <select id="language-selector">
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                </select>
+                <button id="run-button">Run Code</button>
+            </div>
+            <div id="container"></div>
+            <div class="output-container">
+                <pre id="output">// Output will appear here...</pre>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor/min/vs/loader.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
